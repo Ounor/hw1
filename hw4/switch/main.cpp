@@ -1,15 +1,15 @@
 #include <iostream>
 #include <stdio.h>
 
+using namespace std;
 int main()
 {
     int dayNumber;
 
-
     printf("Input day number ");
     
     scanf("%i", &dayNumber);
-
+    
     switch (dayNumber)
     {
     case 1:
@@ -35,7 +35,7 @@ int main()
       break;
 
     default:
-      printf("Wrong day Error ");
+      printf("Error. Wrong day format");
 
       break;
     }
