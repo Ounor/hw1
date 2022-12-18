@@ -16,11 +16,11 @@ int main()
     cout << "месяц: ";    cin >> month;
     cout << "год: ";  cin >> year;
 
-    const char *arrZodiakChina[12] = {"Крыса\n", "Бык\n", "Тигр\n", "Кролик\n", "Дракон\n", "Змея\n", "Лошадь\n", "Овца\n", "Обезьяна\n", "Петух\n", "Собака\n", "Свинья\n"};
-
+    const char *arr[12] = {"Обезьяна\n", "Петух\n", "Собака\n", "Свинья\n", "Крыса\n", "Бык\n", "Тигр\n", "Кролик\n", "Дракон\n", "Змея\n", "Лошадь\n", "Овца\n" };
+    
     if (year%4 == 0) cout<<"Високосный\n" ;
 
-    cout<< arrZodiakChina[month];
+    cout<< arr[year%12];
     
     zodiac=100*month+day;
 
