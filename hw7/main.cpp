@@ -20,6 +20,7 @@ int main() {
         std::cout << val << " - больше 7-ми \n";
     } else if (val == 7) {
         std::cout << val << " - ранво 7-ми \n";
+        return 0;
     } else {
         std::cout << val << "- меньше 7-ми \n";
     }
