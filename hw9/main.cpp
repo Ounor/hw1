@@ -35,7 +35,7 @@ int main() {
  
      int average = sum / quantity;
 
-    cout << "Сумма элементов - " << average << " \n";
+    cout << "Сумма элементов - " << sum << " \n";
     cout << "Среднее арифметическое элементов - " << average << " \n";
     
     cout << "Максимумальное число - " << maxVal << " \n";
