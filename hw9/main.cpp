@@ -40,7 +40,4 @@ int main() {
     
     cout << "Максимумальное число - " << maxVal << " \n";
     cout << "Минимальное число - " << minVal << " \n";
-
- 
-    delete[] arrVal;
 }
