@@ -1,39 +1,39 @@
+#include <iostream>
 
-    int lenght;
-    cout << "Введите длину массива: ";
-    cin >> lenght;
-  
-    int randArray[100];
-  
-    for(int i=0;i<lenght;i++) {
-     cout << "Введите число для добавления в массив: ";
-     cin >> randArray[i];
-     cout << endl;
+using namespace std;
+
+int main() {
+  int n;
+  cout << "Количество элементов: ";
+  cin >> n;
+
+  int arr[100];
+  for (int i = 0; i < n; ++i) {
+    cout << i + 1 << "-ый элемент: ";
+    cin >> arr[i];
+  }
+
+  cout << "Твой массив: ";
+  for (int i = 0; i < n; ++i) {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
+
+  for (int i = 1; i < n; ++i) {
+    for (int r = 0; r < n - i; r++) {
+      if (arr[r] < arr[r + 1]) {
+        int temp = arr[r];
+        arr[r] = arr[r + 1];
+        arr[r + 1] = temp;
+      }
     }
+  }
 
-    for(int a=0;a<lenght;a++) {
-      cout << randArray[a] << " ";
-    }
+  cout << "Сортировка пузырьком: ";
+  for (int i = 0; i < n; ++i) {
+    cout << arr[i] << " ";
+  }
+  cout << endl;
 
-
-    int temp; // временная переменная для обмена элементов местами
-
-    // Сортировка массива пузырьком
-    for (int i = 0; i < size - 1; i++) {
-        for (int j = 0; j < size - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                // меняем элементы местами
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
-
-    // Вывод отсортированного массива на экран
-    for (int i = 0; i < size; i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-
-    delete [] arr; // освобождение памяти;
+  return 0;
+}
