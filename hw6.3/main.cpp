@@ -25,8 +25,6 @@ int main() {
     char temp = array[1];
     array[1] = array[3];
     array[3] = temp;
-
-    // Print the modified string
     std::cout << "Измененная строка: " << array << std::endl;
 
     return 0;
@@ -53,9 +51,7 @@ string word = "Hello";
  int nChar;
 std::cout << "Введите порядковый номер символа для удаления: ";
   std::cin >> nChar;
-
-  
-  
+    
 delete_char(word, nChar);
 cout << word << endl;
 
