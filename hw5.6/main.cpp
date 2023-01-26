@@ -28,13 +28,15 @@ int main() {
     for(int i = 0; i < rows; i++) {
         sort(arr[i], arr[i] + columns);
     }
-
-  // //Задание 2
-  //    for (int i = 0; i < n; i++) {
-  //       int temp = arr[i][0];
-  //       arr[i][0] = arr[i][m-1];
-  //       arr[i][m-1] = temp;
-  //   }
+    //
+    
+    //Задание 2
+     for (int i = 0; i < rows; i++) {
+        int temp = arr[i][0];
+        arr[i][0] = arr[i][rows-1];
+        arr[i][rows-1] = temp;
+    }
+    //
   
     cout << "Итоговый массив: " << endl;
     for(int i = 0; i < rows; i++) {
