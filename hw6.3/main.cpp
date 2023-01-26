@@ -1,25 +1,31 @@
-    // Задание 1
+  // Задание 1
 
-#include <iostream>
-#include <string>
+  #include <iostream>
 
-int main() {
-  
+  #include <string>
+
+  int main() {
+
     std::string word;
     std::cout << "Введите слово: ";
     std::cin >> word;
     std::cout << "Второй символ этого слова - это:" << word[1] << std::endl;
     return 0;
-  
-  
-}
 
-// Задание 2
+  }
 
-#include <iostream>
+  // Задание 2
 
-int main() {
-    char array[] = {'H', 'e', 'l', 'l', 'o'};
+  #include <iostream>
+
+  int main() {
+    char array[] = {
+      'H',
+      'e',
+      'l',
+      'l',
+      'o'
+    };
     std::cout << "Последним элементом строки является: " << array[4] << std::endl;
 
     char temp = array[1];
@@ -28,32 +34,29 @@ int main() {
     std::cout << "Измененная строка: " << array << std::endl;
 
     return 0;
-}
+  }
 
+  // Задание 3
 
-// Задание 3
+  #include <iostream>
 
-#include <iostream>
-#include <string>
+  #include <string>
 
-using namespace std;
+  using namespace std;
 
+  void delete_char(string & word, int index) {
+    word.erase(index, 1);
+  }
 
-void delete_char(string& word, int index)
-{
-   word.erase(index, 1);
-}
+  int main() {
+    string word = "Hello";
 
-int main()
-{
-string word = "Hello";
+    int nChar;
+    std::cout << "Введите порядковый номер символа для удаления: ";
+    std::cin >> nChar;
 
- int nChar;
-std::cout << "Введите порядковый номер символа для удаления: ";
-  std::cin >> nChar;
-    
-delete_char(word, nChar);
-cout << word << endl;
+    delete_char(word, nChar);
+    cout << word << endl;
 
-return 0;
-}
+    return 0;
+  }
